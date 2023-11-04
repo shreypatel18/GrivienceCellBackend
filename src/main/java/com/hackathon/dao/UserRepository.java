@@ -6,5 +6,6 @@ import com.hackathon.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 
+	boolean existsByNameOrEmail(String name,String email);
 	
 }

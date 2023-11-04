@@ -12,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -28,6 +29,7 @@ public class User {
 	
 	@Column(unique = true)
 	private String email;
+	@NotBlank
 	private String password;
 	private String role;
 	private String imgUrl;

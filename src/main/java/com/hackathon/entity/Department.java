@@ -22,6 +22,10 @@ public class Department {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "department")
 	private List<Employee> employee=new ArrayList<>();
+	
+	@OneToMany(mappedBy = "department",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List<Complaint> complaints=new ArrayList<>();
+	
 	public Department() {
 		super();
 		// TODO Auto-generated constructor stub
